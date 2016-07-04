@@ -7,5 +7,7 @@ public class CreateAssetBundle {
     {
         string target = Application.dataPath + "/StreamingAssets";
         BuildPipeline.BuildAssetBundles(target, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
+
+
     }
 }
