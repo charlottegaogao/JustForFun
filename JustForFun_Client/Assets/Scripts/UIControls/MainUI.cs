@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 public class MainUI: MonoBehaviour {
 
-	// Use this for initialization
-	public Button startGame;
+    // Use this for initialization
+    public Button StartGame;
 	void Start () {
-		startGame.onClick.AddListener (delegate() {
-			this.BtnClick(startGame);
-	});
+        EventTriggerListener.Get(StartGame.gameObject).onClick = StartGameClick;
 	}
 	
 	// Update is called once per frame
@@ -17,8 +16,8 @@ public class MainUI: MonoBehaviour {
 		
 	}
 
-	void BtnClick(Button sender)
+	void StartGameClick(GameObject go)
 	{
-
+        Debug.Log("startGame");
 	}
 }

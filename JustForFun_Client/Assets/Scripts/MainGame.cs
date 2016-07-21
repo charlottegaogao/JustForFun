@@ -5,8 +5,9 @@ public class MainGame : MonoBehaviour {
 
 
 	// Use this for initialization
-	public Camera uiCamera;
+	public Camera UICamera;
 	public Camera mainCamera;
+    public Transform UIRoot;
     void Awake()
     {
         Global._current = this;
@@ -15,7 +16,8 @@ public class MainGame : MonoBehaviour {
 		DontDestroyOnLoad(this.gameObject);
 		Global.loadTool = this.gameObject.GetComponent<LoadTools>();
 		Global.mainCamera = mainCamera;
-		Global.uiCamera = uiCamera;
+		Global.uiCamera = UICamera;
+        Global.uiRoot = UIRoot;
 		Global.ShowLoadingUI(); 
 
 	}
