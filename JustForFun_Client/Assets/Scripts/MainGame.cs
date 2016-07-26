@@ -13,6 +13,7 @@ public class MainGame : MonoBehaviour {
         Global._current = this;
     }
 	void Start () {
+		Debug.Log ("main start");
 		DontDestroyOnLoad(this.gameObject);
 		Global.loadTool = this.gameObject.GetComponent<LoadTools>();
 		Global.mainCamera = mainCamera;
