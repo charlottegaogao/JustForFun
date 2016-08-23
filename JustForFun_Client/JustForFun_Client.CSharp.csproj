@@ -60,17 +60,27 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\DOTween\DOTween.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Enumeration.cs" />
-    <Compile Include="Assets\Scripts\GSprite.cs" />
-    <Compile Include="Assets\Scripts\Global.cs" />
-    <Compile Include="Assets\Scripts\LoadTools.cs" />
-    <Compile Include="Assets\Scripts\MainGame.cs" />
-    <Compile Include="Assets\Scripts\RoleData.cs" />
-    <Compile Include="Assets\Scripts\UIControls\LoadingUI.cs" />
+    <Compile Include="Assets\Scripts\Engine\CameraScale.cs" />
+    <Compile Include="Assets\Scripts\Engine\DontDestoryUnLoad.cs" />
+    <Compile Include="Assets\Scripts\Engine\EventTriggerListener.cs" />
+    <Compile Include="Assets\Scripts\Engine\LoadFile.cs" />
+    <Compile Include="Assets\Scripts\Engine\LoadTools.cs" />
+    <Compile Include="Assets\Scripts\GFramework\Data\RoleData.cs" />
+    <Compile Include="Assets\Scripts\GFramework\Enumeration.cs" />
+    <Compile Include="Assets\Scripts\GFramework\Global.cs" />
+    <Compile Include="Assets\Scripts\GFramework\MainGame.cs" />
+    <Compile Include="Assets\Scripts\GFramework\UIControls\LoadingUI.cs" />
+    <Compile Include="Assets\Scripts\GFramework\UIControls\MainUI.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DOTween\DOTween.XML" />
+    <None Include="Assets\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\DOTween\readme.txt" />
     <None Include="Assets\Resources\Tables\spriteTable.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
