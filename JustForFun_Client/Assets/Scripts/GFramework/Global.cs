@@ -37,8 +37,16 @@ public class Global {
     public static void ShowMainUI()
     {
         MainUI mainUI = loadTool.LoadUI<MainUI>("MainUI", uiRoot);
+		mainUI.Next = (s, e) => {
+			UnityEngine.Object.Destroy(mainUI.gameObject);
+			ShowGameUI();
+		};
     }
 
+	public static void ShowGameUI()
+	{
+		Debug.Log ("show game ui");
+	}
 
     public static void LoadRoleData()
     {
@@ -65,6 +73,10 @@ public class Global {
         _roleData.LoginTimes += 1;
         loadTool.SaveToLocal(_roleData, ROLE_DATA_FILE);
     }
+
+
+
+
 
    
 }

@@ -3,10 +3,12 @@ using System.Collections;
 using UnityEditor;
 public class CreateAssetBundle {
     [MenuItem("Assets/BuildBundles")]
+
     static void BuildAllAssetBundles()
     {
         string target = Application.dataPath + "/StreamingAssets";
-        BuildPipeline.BuildAssetBundles(target, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
+
+		BuildPipeline.BuildAssetBundles(target, BuildAssetBundleOptions.None, BuildTarget.StandaloneOSXIntel64);
 
 
     }

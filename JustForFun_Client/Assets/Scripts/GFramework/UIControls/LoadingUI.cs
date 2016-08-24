@@ -7,12 +7,11 @@ using UnityEngine.Events;
 using DG.Tweening;
 namespace GFramework.UIControl
 { 
-    public class LoadingUI : UIBehaviour {
+	public class LoadingUI : BaseUI {
 
-	    public NextEventHandler Next;
         public Text loadingText;
-        // Use this for initialization
-        protected override void Start () {
+
+		protected override void Start () {
             if(this.gameObject != null)
 		        DontDestroyOnLoad (this.gameObject);
             InitMainScene ();

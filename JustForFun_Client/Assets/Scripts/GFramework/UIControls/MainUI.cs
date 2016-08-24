@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using DG.Tweening;
 namespace GFramework.UIControl
 {
-    public class MainUI : UIBehaviour
+	public class MainUI : BaseUI
     {
 
         // Use this for initialization
@@ -47,11 +47,20 @@ namespace GFramework.UIControl
         {
             Global.ClearRoleData();
             Global.AddLoginTimes();
+			InitGameScene ();
         }
 
         void ContinueGame(GameObject go)
         {
             Global.AddLoginTimes();
+			InitGameScene ();
         }
+
+		void InitGameScene()
+		{
+			string mapName = "level" + Global.RoleData.LastMap;
+			StartCoroutine (Global.loadTool.LoadScene (mapName, Next,null));
+
+		}
     }
 }
