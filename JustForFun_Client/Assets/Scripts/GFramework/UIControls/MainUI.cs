@@ -22,7 +22,7 @@ namespace GFramework.UIControl
             EventTriggerListener.Get(Continue.gameObject).onClick = ContinueGame;
 
             //--------------visible------------------------------
-            Continue.gameObject.SetActive(Global.RoleData.LoginTimes > 1);
+            Continue.gameObject.SetActive(Global.RoleData.LoginTimes >= 1);
             
             //test code for tweener
             //      Image btnImage = StartGame.gameObject.GetComponent<Image> ();

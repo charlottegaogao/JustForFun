@@ -48,7 +48,7 @@ public class Global {
         }
         if(_roleData == null)
         {
-            _roleData = new RoleData(1, 0, 0);
+            _roleData = new RoleData(0, 0, 0);
             loadTool.SaveToLocal(_roleData, ROLE_DATA_FILE);
         }
     }
