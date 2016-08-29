@@ -1,0 +1,4 @@
+ID,Title,Step,Trigger,Param
+1,rent a place,1,1,1
+2,hire a cook,1,2,1
+3,hire a waiter,1,2,2
